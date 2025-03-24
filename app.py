@@ -28,5 +28,5 @@ def get_chat_response(text):
     return tokenizer.decode(chat_history_ids[:, input_ids.shape[-1]:][0], skip_special_tokens=True)
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))  # Usa el puerto asignado por Render
+    port = int(os.environ.get("PORT", 100000))  # Usa el puerto asignado por Render
     app.run(host="0.0.0.0", port=port)
